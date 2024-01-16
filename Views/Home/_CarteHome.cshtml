@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TrklPPR.Models.Category>
+
+<section class="cartes">
+
+    <div class="dbl_flex">
+
+        <div class="carte_menu_plats">
+
+            <h4 class="titre_carte">Carte des plats</h4>
+
+            <div class="flex_carte">
+
+                @* Menu des plats *@
+
+                <div class="carte_plats">
+
+                    @foreach (var category in Model)
+                    {
+
+                        if (category.Dishes.Any())
+                        {
+                            <p>@category.Title :</p>
+                            <ul>
+                                @foreach (var dish in category.Dishes)
+                                {
+                                    <li>@dish.Title - @dish.Price €</li>
+                                    <li>(@dish.Description)</li>
+                                }
+                            </ul>
+                        }
+                    }
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="carte_menu_boissons">
+
+            <h4 class="titre_carte">Carte des boissons</h4>
+
+            <div class="flex_carte">
+
+                <div class="carte_boissons">
+
+                    @foreach (var category in Model)
+                    {
+                        if (category.Drinks.Any())
+                        {
+                            <p>@category.Title :</p>
+                            <ul>
+                                @foreach (var drink in category.Drinks)
+                                {
+                                    <li>@drink.Name - @drink.Price €</li>
+                                }
+                            </ul>
+                        }
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    @* Redirige vers la modale de reservation *@
+
+    <button class="btn_reservation" id="btn_reservation3">Prendre une réservation</button>
+
+</section>

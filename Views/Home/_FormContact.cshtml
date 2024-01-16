@@ -1,0 +1,50 @@
+@model TrklPPR.Models.ContactForm
+
+<div class="contactez-nous" id="contactez-nous">
+    <button class="modal-close-btn" id="close-btn">&times;</button>
+    <h2>Contactez-nous</h2>
+    <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas à utiliser ce formulaire pour
+        prendre contact avec nous !</p>
+    <form asp-action="Contact" method="post" class="formulaire_contact">
+        <label asp-for="FirstName">Votre nom</label>
+        <input asp-for="FirstName" type="text" id="nom" name="Nom" placeholder="Martin">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+
+        <label asp-for="LastName">Votre prénom</label>
+        <input asp-for="LastName" type="text" id="prenom" name="Prenom" placeholder="Martin">
+        <span asp-validation-for="LastName" class="text-danger"></span>
+
+        <label asp-for="PhoneNumber">Votre numéro de téléphone</label>
+        <input asp-for="PhoneNumber" type="phone" id="phone" name="Téléphone" placeholder="06XXXXXXXX">
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+        <label asp-for="Email">Votre e-mail</label>
+        <input asp-for="Email" type="email" id="email" name="E-mail" placeholder="monadresse@mail.com">
+        <span asp-validation-for="Email" class="text-danger"></span>
+
+        <label asp-for="Subject">Quel est le sujet de votre message ?</label>
+        <select asp-for="Subject" name="Objet" id="sujet">
+            <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+            <option value="Réservation">Réservation</option>
+            <option value="Menu">Menu</option>
+            <option value="Service">Service</option>
+            <option value="Facturation">Facturation</option>
+            <option value="Message d'amour">Message d'amour</option>
+            <option value="Candidature spontanée">Candidature spontanée</option>
+            <option value="Autre">Autre...</option>
+        </select>
+        <span asp-validation-for="Subject" class="text-danger"></span>
+
+        <label asp-for="Message">Votre message</label>
+        <textarea asp-for="Message" id="message" name="Message"
+            placeholder="Bonjour, je vous contacte car...."></textarea>
+        <span asp-validation-for="Message" class="text-danger"></span>
+
+        <button class="btn_envoyer" type="submit">Envoyer</button>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <p>@TempData["SuccessMessage"]</p>
+        }
+    </form>
+</div>

@@ -1,0 +1,52 @@
+@model IEnumerable<TrklPPR.Models.Dish>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="adminH1">Plats</h1>
+
+<p>
+    <a asp-action="Create">Créer un nouveau plat</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Titre
+            </th>
+            <th>
+                Déscription
+            </th>
+            <th>
+                Prix
+            </th>
+            <th>
+                Catégorie
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.Title)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editer</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Afficher les détails</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Supprimer</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,72 @@
+@model IEnumerable<TrklPPR.Models.Review>
+
+<div class="container-avis">
+    <div class="avis-left">
+        <form class="post-review form-control">
+            <div class="post-review-header">
+                <input class="post-review-name" type="text" id="username" name="UserName" placeholder="Martin" required>
+                <div class="post-rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="star5">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="star4">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="star3">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="star2">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="star1">1 star</label>
+                </div>
+            </div>
+            <div class="post-review-message">
+                <textarea class="post-review-ta" type="text" id="usermessage" name="UserMessage"
+                    placeholder="Bien meilleur qu'à la bonne auberge" required>
+                </textarea>
+                <button class="btn_envoyerAvis" type="submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
+    <div class="avis-right">
+        <div class="container container-carousel text-center my-3">
+            <div class="row m-auto">
+                <div id="recipeCarousel" class="carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        @foreach (var review in Model)
+
+                        {
+                            <div class="carousel-item @(review == Model.First() ? "active" : "")">
+                                <div class="review-card">
+                                    <div class="review-card-body">
+                                        <div class="review-card-header">
+                                            <h4>@review.Name</h4>
+                                            <p>@review.Rating</p>
+                                        </div>
+                                        <div class="review-scroll">
+                                            <p class="review-card-text">@review.Commentaire</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <a class="carousel-control-prev w-aut slider-button slider-button-left" href="#recipeCarousel"
+                        role="button" data-bs-slide="prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </a>
+                    <a class="carousel-control-next w-aut slider-button slider-button-right" href="#recipeCarousel"
+                        role="button" data-bs-slide="next">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

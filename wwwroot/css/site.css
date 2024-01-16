@@ -1,0 +1,1039 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap");
+
+/* GLOBAL STYLES */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+/* STYLES FOR CONTAINER */
+.container {
+ margin: 0;
+ padding: 0;
+}
+
+/* STYLES FOR _FOOTER */
+.container-footer {
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ height: auto;
+ display: flex;
+ flex-direction: column;
+}
+
+/* STYLES FOR WRAPPER */
+.wrapper {
+ margin: 0;
+ padding: 0;
+}
+
+/* STYLES FOR _LEGALMENTIONS */
+.container-legal {
+ margin: 0;
+ padding: 0;
+ display: flex;
+ flex-direction: row;
+ background-color: var(--rouge);
+ width: 100%;
+ height: 30vh;
+ justify-content: space-between;
+ align-items: center;
+}
+
+h5 {
+ color: var(--ecrit);
+ font-size: bold;
+ font-weight: 600;
+ text-decoration: underline;
+}
+
+.flex-legal {
+ width: 50%;
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.map-photo {
+ max-width: 100%;
+ list-style: none;
+ transition: none;
+ overflow: hidden;
+ width: 50%;
+ height: 100%;
+ object-fit: cover;
+}
+
+/* STYLES FOR LISTS */
+
+ul {
+ list-style-type: none;
+ padding: 0;
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+}
+
+li a {
+ text-decoration: none;
+ color: var(--ecrit);
+}
+
+li a:hover {
+color: var(--vert);
+text-decoration: underline;
+}
+/* .h-list {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ display: flex;
+}
+.h-list li a {
+ margin-right: 10px;
+} */
+/* STYLES FOR _REVIEWS */
+.container-avis {
+ width: 100%;
+ height: auto;
+ margin: 0;
+ padding: 0;
+ padding-top: 1.5rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ background: linear-gradient(var(--blanc_creme), var(--rouge));
+ box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+ color: var(--ecrit);
+}
+
+.avis-right {
+ display: flex;
+ width: 100%;
+ height: 60%;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+}
+
+.avis-left {
+ width: 100%;
+ height: 39%;
+ display: flex;
+ overflow: auto;
+ scroll-behavior: smooth;
+ margin-bottom: 1%;
+ margin-left: 6.25rem;
+}
+
+.post-review {
+ width: 29.5%;
+ height: 33vh;
+ display: flex;
+ flex-flow: column;
+ justify-content: flex-start;
+ align-content: center;
+ border-radius: 16px;
+ border: var(--blanc_creme) solid 0.2rem;
+ box-shadow: #272727 0.1rem;
+ margin: 0.5rem;
+ background-color: var(--ecrit);
+ color: var(--blanc_creme);
+}
+.post-review-name {
+ font-size: 1.8rem;
+ line-height: 140%;
+ padding: 1% 1%;
+ background-color: var(--ecrit);
+ color: var(--blanc_creme);
+ border: none;
+}
+.post-review-header {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-bottom: var(--blanc_creme) solid 0.2rem;
+}
+.post-review-title {
+ display: flex;
+ justify-content: center;
+ padding-top: 0.75rem;
+ width: 40%;
+ font-weight: 600;
+ align-items: center;
+ font-size: bold;
+ font-size: 24px;
+}
+.post-review-content {
+ justify-content: center;
+ text-align: left;
+ font-weight: 300;
+ font-size: 12px;
+ width: 100%;
+ text-indent: 2rem;
+ padding-top: 0.5rem;
+ color: var(--blanc_creme);
+ margin-left: 0.5rem;
+}
+.post-review-ta {
+ background-color: var(--ecrit);
+ color: var(--blanc_creme);
+ font-size: 14px;
+ font-weight: 400;
+ border: none;
+ width: 100%;
+ height: 110%;
+ resize: none;
+ margin-top: 1%;
+}
+.btn_envoyerAvis {
+ margin: 1%;
+ padding: 0;
+ width: 30%;
+ cursor: pointer;
+ transform: translateX(110%) translateY(-15%);
+ font-family: "Roboto Flex";
+ font-weight: 600;
+ font-size: 20px;
+ background-color: var(--blanc_creme);
+ border: var(--vert) solid 1px;
+ border-radius: 14px;
+ text-align: center;
+ color: var(--ecrit);
+}
+.btn_envoyerAvis:hover {
+ background-color: var(--vert);
+ color: var(--blanc_creme);
+ border: var(--blanc_creme) solid 1px;
+}
+*/ .rating {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+}
+.star {
+ font-size: 36px;
+ padding: 0.5rem;
+ border-color: #272727;
+ color: yellow;
+}
+.slider-button-left {
+ left: 10px;
+}
+.slider-button-left svg {
+ width: 50px;
+ height: 50px;
+}
+.slider-button-right {
+ right: -45px;
+}
+.slider-button-right svg {
+ width: 50px;
+ height: 50px;
+}
+.slider-button-right {
+ border: none;
+ position: absolute;
+ transform: translateY(50%) translateX(-265%);
+ cursor: pointer;
+ transition: 0.2s all ease-in-out;
+ color: var(--ecrit);
+}
+.slider-button-left {
+ border: none;
+ position: absolute;
+ transform: translateY(50%) translate(240%);
+ cursor: pointer;
+ transition: 0.2s all ease-in-out;
+ color: var(--ecrit);
+}
+.slider-button-left:hover {
+ transform: translateY(50%) translateX(240%) scale(1.25);
+ color: var(--blanc_creme);
+}
+.slider-button-right:hover {
+ transform: translateY(50%) translateX(-265%) scale(1.25);
+ color: var(--blanc_creme);
+}
+.carousel {
+ margin-top: 3rem;
+ margin-bottom: 1.5rem;
+}
+.carousel-inner,
+.carousel-inner:active {
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: flex-start;
+ transform: translateY(-20%);
+}
+.review-card {
+ font-family: "Roboto Flex";
+ margin: 0;
+ margin-left: 1rem;
+ width: 100%;
+ height: 100%;
+ background-color: var(--ecrit);
+ border-radius: 16px;
+ border: var(--blanc_creme) solid 0.2rem;
+ box-shadow: #272727 0.1rem;
+ color: var(--blanc_creme);
+}
+.review-card-header {
+ font-family: "Oswald";
+ color: var(--blanc_creme);
+ font-size: 20px;
+ font-weight: 500;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+ width: 100%;
+ height: 25%;
+ margin: 0;
+ border-bottom: var(--blanc_creme) solid 1px;
+}
+.review-card-header > h4 {
+ color: var(--blanc_creme);
+}
+.review-card-header > p {
+ color: var(--blanc_creme);
+}
+p.review-card-text {
+ color: var(--blanc_creme);
+ font-size: medium;
+ text-align: left;
+ font-weight: 200;
+ text-indent: 3rem;
+ margin-left: 0.5rem;
+ height: 15vh;
+ margin-bottom: 0;
+ margin-top: 0;
+ padding: 1rem;
+}
+.review-scroll {
+ width: auto;
+ height: auto;
+ max-height: 80%;
+ overflow-y: scroll;
+}
+/* SCROLL STYLES */
+::-webkit-scrollbar {
+ display: none;
+}
+
+/* Star Checking */
+.post-rate {
+ width: 60%;
+ display: flex;
+ flex-direction: row-reverse;
+ justify-content: center;
+ align-items: center;
+ height: 42px;
+}
+.post-rate:not(:checked) > input {
+ position: absolute;
+ top: -9999px;
+}
+.post-rate:not(:checked) > label {
+ float: right;
+ width: 1em;
+ overflow: hidden;
+ white-space: nowrap;
+ cursor: pointer;
+ font-size: 30px;
+ color: #ccc;
+}
+.post-rate:not(:checked) > label:before {
+ content: "★ ";
+}
+.post-rate > input:checked ~ label {
+ color: #ffc700;
+}
+.post-rate:not(:checked) > label:hover,
+.post-rate:not(:checked) > label:hover ~ label {
+ color: #deb217;
+}
+.post-rate > input:checked + label:hover,
+.post-rate > input:checked + label:hover ~ label,
+.post-rate > input:checked ~ label:hover,
+.post-rate > input:checked ~ label:hover ~ label,
+.post-rate > label:hover ~ input:checked ~ label {
+ color: #c59b08;
+}
+
+
+
+/** RECCURENTS **/
+body {
+ font-family: "Oswald";
+ margin-bottom: 0;
+ width: 100%;
+ height: auto;
+ --rouge: #d5421d;
+ --vert: #2b6c0d;
+ --ecrit: #272727;
+ --blanc_creme: #e6ce8f;
+ --opacity_creme: rgba(230, 206, 143, 0.85);
+ --white: #ffffff;
+ --black: #000000;
+}
+.rating>label {
+    width: 10rem;
+    font-size: 15vw;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+.rating > label::before {
+    content: “\2605”;
+    position: absolute;
+    opacity: 0;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before {
+    opacity: 1 !important;
+}
+
+.rating > input:checked ~ label:before {
+    opacity: 1;
+}
+
+.rating:hover > input:checked ~ label:before {
+    opacity: 0.4;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+ color: var(--ecrit);
+}
+
+a {
+ color: var(--white);
+}
+
+/** HEADER ET NAVBAR **/
+
+.navbar {
+ padding-top: 0;
+ padding-bottom: 0;
+}
+
+.navbar_color {
+ background-color: var(--rouge);
+ /* height: 10vh; */
+}
+
+.navbar-nav {
+ justify-content: space-around;
+}
+
+.nav-item {
+ border-left: 1px solid var(--ecrit);
+ padding: 0.5rem 2rem;
+}
+
+
+/* Discover Menu*/
+.menuDecouverteContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: self-start;
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    background-image: url("../img/menu.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding: 30px;
+}
+
+.menuDecouverteContainer h2 {
+    color: #D5421D;
+    text-decoration: underline
+}
+
+.menuDecouverteLeft {
+    color: #272727;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.menuDecouverteLeft div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2b6c0d;
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    min-width: 50%;
+    min-height: 400px
+}
+
+.menuDecouverteLeft li {
+    padding: 7px;
+}
+
+.menuDecouverteLeft li.clickable:hover {
+    background-color: red;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 10px;
+    animation: blinkBackground 1.2s infinite;
+}
+
+@keyframes blinkBackground {
+    0%,25%, 50%,75%, 100% {
+        background-color: red;
+    }
+
+    25%, 75% {
+        background-color: initial;
+    }
+}
+
+.discover-image{
+    width:20rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.menuDecouverteRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+}
+
+.catTitle {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold
+}
+
+.menuDecouverteRight div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(213, 66, 29, 0.8);
+    border-radius: 20px;
+    padding: 20px
+}
+
+    .menuDecouverteRight img {
+        width: 20rem;
+        height: 20rem
+    }
+
+    .menuDecouverteRight button {
+        border-radius: 20px;
+        width: auto;
+        margin-top: 20px;
+    }
+/*Fin du Discover Menu*/
+
+.img_header {
+ width: 100%;
+ height: 35vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-image: url("../img/img_header.jpg");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.img_logo {
+ width: 35vw;
+ height: 45vh;
+}
+
+/** SECTION CARTE PLATS ET BOISSONS **/
+
+.cartes {
+ width: 100%;
+ height: auto;
+ margin: 0;
+ padding: 2%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ flex-direction: column;
+ background-image: url("../img/img_fond_carte-min.jpg");
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+/** Englobe les deux cartes pour les mettre en palce **/
+
+.dbl_flex {
+ width: 100%;
+ height: auto;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+}
+
+/** Gère la taille des deux cartes **/
+
+.carte_menu_plats,
+.carte_menu_boissons {
+ width: 35%;
+ height: auto;
+ display: flex;
+ flex-direction: column;
+}
+
+/** créer le background de la carte **/
+
+.flex_carte {
+ background-color: var(--opacity_creme);
+ box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+ border-radius: 15px;
+ padding: 2%;
+}
+
+.titre_carte {
+ color: var(--rouge);
+ text-align: center;
+ margin-bottom: 5%;
+ text-decoration: underline;
+ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.entrees,
+.plats,
+.desserts,
+.softs,
+.aperos,
+.biers,
+.alcool_fort {
+ list-style: none;
+}
+
+.carte_boissons p,
+.carte_plats p {
+ text-align: center;
+ margin: 2%;
+ font-weight: bold;
+}
+
+.contre_li_footer {
+ padding: 0;
+ margin-bottom: 0;
+ background: none;
+}
+
+/** SECTION BOUTONS RESERVATION ET CONTACT **/
+
+.ContactReservation {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(var(--blanc_creme), var(--rouge));
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/** BOUTON DE RESERVATION **/
+
+.btn_reservation {
+
+
+    width: 16vw;
+    margin: 2%;
+    padding: 1%;
+    color: var(--blanc_creme);
+    background-color: var(--ecrit);
+    border-radius: 25px;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+    border: none;
+    transition: .2s all ease-in-out;
+}
+
+    .btn_reservation:hover {
+        color: var(--white);
+        background-color: var(--vert);
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+/** FIN DU CSS BOISSONS ET PLATS **/
+
+/** BOUTON OUVERTURE DU FORMULAIRE DE CONTACT**/
+
+.contactFormBtn {
+
+    width: 16vw;
+    margin: 2%;
+    padding: 1%;
+    color: var(--blanc_creme);
+    background-color: var(--ecrit);
+    border-radius: 25px;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+    border: none;
+    transition: .2s all ease-in-out;
+}
+
+    .contactFormBtn:hover {
+        color: var(--white);
+        background-color: var(--vert);
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+/** FORMULAIRE DE CONTACT **/
+
+.contactez-nous {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5%;
+    background: var(--rouge);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+    .contactez-nous h2 {
+        color: var(--blanc_creme);
+        margin-bottom: 1%;
+    }
+
+    .contactez-nous h5 {
+        width: 60%;
+        color: var(--blanc_creme);
+        text-align: center;
+        margin-bottom: 1%;
+    }
+
+    .contactez-nous form {
+        width: 60%;
+    }
+
+    .contactez-nous select {
+        width: 50%;
+        margin: 1%;
+        padding: .5%;
+        text-align: center;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .contactez-nous textarea {
+        width: 50%;
+        height: 100px;
+        margin: 1%;
+        box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .contactez-nous label {
+        color: var(--blanc_creme);
+    }
+
+.modal-close-btn {
+    width: 2%;
+    height: 4%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: var(--rouge);
+    background-color: var(--blanc_creme);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+    .modal-close-btn:hover {
+        box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+.formulaire_contact {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .formulaire_contact input {
+        width: 50%;
+        margin: 1%;
+        padding: .5%;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+        border: none;
+    }
+
+.btn_envoyer {
+ width: 25%;
+ height: 10%;
+ color: var(--rouge);
+ background-color: var(--blanc_creme);
+ box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+ border-radius: 25px;
+ border: none;
+}
+
+.btn_envoyer:hover {
+ box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/** FIN DU CSS FORMULAIRE DE CONTACT **/
+
+/** CSS DU FORMULAIRE DE RESERVATION **/
+
+.reservez {
+
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5%;
+    background: var(--rouge);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+    .reservez h2 {
+        color: var(--blanc_creme);
+        margin-bottom: 1%;
+    }
+
+    .reservez h5 {
+        width: 60%;
+        color: var(--blanc_creme);
+        text-align: center;
+        margin-bottom: 1%;
+    }
+
+    .reservez form {
+        width: 60%;
+    }
+
+    .reservez textarea {
+        width: 50%;
+        height: 100px;
+        margin: 1%;
+        box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .reservez label {
+        color: var(--blanc_creme);
+    }
+
+.prendre-reservation-close-btn {
+    width: 2%;
+    height: 4%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: var(--rouge);
+    background-color: var(--blanc_creme);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.prendre-reservation-close-btn:hover {
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.formulaire_reservation {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulaire_reservation input {
+    width: 50%;
+    margin: 1%;
+    padding: .5%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.btn_envoyer {
+ width: 25%;
+ height: 10%;
+ color: var(--rouge);
+ background-color: var(--blanc_creme);
+ box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+ border-radius: 25px;
+ border: none;
+}
+
+.btn_envoyer:hover {
+ box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Who Are We Section */
+
+.container-who {
+ background-color: var(--vert);
+ margin: 0;
+ padding: 0;
+ display: flex;
+}
+
+.who-left {
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ flex-direction: column;
+ width: 50%;
+ height: 80%;
+}
+.who-text {
+ font-family: "Roboto Flex";
+ font-weight: 300;
+ font-size: larger;
+ color: var(--blanc_creme);
+ margin-left: 3rem;
+ justify-content: center;
+ text-align: left;
+ text-indent: 3rem;
+}
+
+.who-title {
+ font-family: "Oswald";
+ color: var(--blanc_creme);
+ font-weight: 900;
+ text-decoration: underline;
+ text-align: center;
+ margin-top: 1rem;
+ margin-bottom: 2.5rem;
+}
+
+.bistrophoto {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 20%;
+}
+img.photobistro {
+ object-position: center;
+ object-fit: contain;
+ height: 25%;
+ width: 90%;
+}
+
+.who-arrow {
+ font-family: "Oswald";
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-style: italic;
+ background-color: var(--blanc_creme);
+ border-radius: 30px;
+ margin-top: 1rem;
+ margin-bottom: 2rem;
+ width: 75%;
+}
+
+.who-right {
+ width: 50%;
+ height: auto;
+}
+img.img-right {
+ width: 90%;
+ height: 90%;
+ margin: 5%;
+ justify-content: center;
+ align-content: center;
+ object-fit: cover;
+}
+
+span.rarr {
+ margin-left: 7.5rem;
+ font-size: 35px;
+ margin-bottom: 1rem;
+}
+h4.who-arrow {
+ justify-content: center;
+ align-items: center;
+ margin-left: 7.5rem;
+}
+
+@media (max-width: 767px) {
+ .carousel-inner .carousel-item > div {
+  display: none;
+ }
+ .carousel-inner .carousel-item > div:first-child {
+  display: block;
+ }
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+ display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+ .carousel-inner .carousel-item-end.active,
+ .carousel-inner .carousel-item-next {
+  transform: translateX(25%);
+ }
+
+ .carousel-inner .carousel-item-start.active,
+ .carousel-inner .carousel-item-prev {
+  transform: translateX(-25%);
+ }
+
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+ transform: translateX(0);
+}
+
+h4.who-arrow {
+    justify-content: center;
+    align-items: center;
+    margin-left: 7.5rem;
+}

@@ -1,0 +1,42 @@
+@model IEnumerable<TrklPPR.Models.Category>
+<article class="menuDecouverteContainer">
+    <div class="menuDecouverteLeft">
+        <h2>Notre Menu découverte</h2>
+        <div>
+            @foreach (var category in Model)
+            {
+
+                if (category.Discovers.Count() > 0)
+                {
+                    <p class="catTitle">@category.Title</p>
+                    <ul>
+                        @foreach (var discover in category.Discovers)
+                        {
+                            <li class="clickable">@discover.Name
+                                @if (!string.IsNullOrEmpty(discover.Image))
+                                {
+                                    <img src="@discover.Image" alt="Image du plat" class="discover-image hidden" />
+                                }
+                            </li>
+                            <li class="hidden">(@discover.Description)</li>
+                        }
+                    </ul>
+                    <br />
+                }
+            }
+        </div>
+    </div>
+
+    <div class="menuDecouverteRight">
+
+        <h2>Cliquez sur un plat</h2>
+        <div class="card" style="width: auto;">
+            <div class="card-body">
+                <img src="./img/assiette.jpg" class="card-img-top menuImage" alt="Image du plat">
+                <h5 class="card-title" id="menuRightTitle"></h5>
+                <p class="card-text" id="menuRightText"></p>
+                <button type="button" class="btn_reservation" id="btn_reservation">Prendre une réservation</button>
+            </div>
+        </div>
+    </div>
+</article>

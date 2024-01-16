@@ -1,0 +1,12 @@
+@model TrklPPR.ViewModels.HomeViewModel
+
+<div class="wrapper">
+    <partial name="_WhoAreWe.cshtml" />
+    @await Html.PartialAsync("_Menu_decouverte", Model.Categories)
+    @await Html.PartialAsync("_CarteHome", Model.Categories)
+    <partial name="_Buttons.cshtml"/>
+    @await Html.PartialAsync("_FormReservation.cshtml", Model.ReservationForm)
+    @await Html.PartialAsync("_FormContact.cshtml", Model.ContactForm) 
+    @await Html.PartialAsync("_Footer", Model.Reviews)
+
+</div>
